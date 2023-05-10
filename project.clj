@@ -9,7 +9,7 @@
                  [ring-cors "0.1.13"]
                  [ring/ring-json "0.5.1"]]
   :plugins [[lein-ring "0.12.6"]]
-  :ring {:handler prio-backend.handler/app
+  :ring {:handler prio-backend.core/app
          :open-browser? false} 
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]

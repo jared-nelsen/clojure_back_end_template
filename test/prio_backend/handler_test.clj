@@ -1,7 +1,7 @@
 (ns prio-backend.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [prio-backend.handler :refer :all]))
+            [prio-backend.core :refer :all]))
 
 (deftest test-app
   (testing "main route"

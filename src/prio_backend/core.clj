@@ -1,4 +1,4 @@
-(ns prio-backend.handler
+(ns prio-backend.core
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.params :refer [wrap-params]]
