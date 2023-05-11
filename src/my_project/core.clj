@@ -14,13 +14,13 @@
 
 (def app
   (-> (wrap-defaults app-routes api-defaults)
-      (wrap-params)
+      (wrap-params) 
+      (wrap-json-body)
+      (wrap-json-response)
       (wrap-cors
        :access-control-allow-origin [#".*"]
        :access-control-allow-methods [:get :put :post :delete]
-       :access-control-allow-headers [:all])
-      (wrap-json-body)
-      (wrap-json-response)))
+       :access-control-allow-headers [:all])))
 
 (defn -main 
   []
