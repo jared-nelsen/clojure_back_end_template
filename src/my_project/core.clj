@@ -1,4 +1,4 @@
-(ns priora-backend.core
+(ns my-project.core
   (:gen-class)
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
@@ -9,7 +9,7 @@
             [ring.adapter.jetty :as ring-jetty]))
 
 (defroutes app-routes
-  (GET "/" [] "Hello Priora!")
+  (GET "/" [] "Hello People of Earth!")
   (route/not-found "Not Found"))
 
 (def app

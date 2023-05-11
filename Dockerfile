@@ -8,4 +8,4 @@ RUN lein uberjar
 
 EXPOSE 3000
 
-CMD ["java", "-jar", "/app/target/priora_backend-1.0.0-standalone.jar"]
+CMD ["java", "-jar", "/app/target/my_project-0.1.0-standalone.jar"]
