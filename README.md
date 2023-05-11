@@ -1,6 +1,6 @@
-# Clojure Backend Starter
+# Clojure Backend Template
 
-This project serves as a project template for a straightforward and minimimal Clojure Back End.
+This project serves as a project template for a straightforward and minimimal Clojure Back End Service.
 
 It uses Ring, Jetty, and Compojure and includes a few useful libraries in the project file.
 
