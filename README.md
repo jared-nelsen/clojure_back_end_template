@@ -1,19 +1,26 @@
-# priora_backend
+# Clojure Backend Starter
 
-FIXME
+This project serves as a project template for a straightforward and minimimal Clojure Back End.
+
+It uses Ring, Jetty, and Compojure and includes a few useful libraries in the project file.
+
+It includes a Docker file for deployment and a Makefile for useful commands.
 
 ## Prerequisites
 
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
+You will need Clojure Leiningen 2.0.0 or above installed.
 
 ## Running
 
-To start a web server for the application, run:
+    1. Build container: `make build`
+    2. Run container: `make run`
+    3. Stop container: `make stop`
 
-    lein ring server
+## Using for your own
 
-## License
+    Change all instances of `my_project` to be the name of your project and alter the project file with your information.
 
-Copyright © 2023 FIXME
+## Notes
+
+Runs on port 3000
+
