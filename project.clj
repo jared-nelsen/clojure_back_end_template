@@ -10,7 +10,7 @@
                  [ring/ring-json "0.5.1"]
                  [ring/ring-jetty-adapter "1.10.0"]]
   :plugins [[lein-ring "0.12.5"]]
-  :main my_project.core
-  :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.2"]]}})
+  :main my-project.core
+  :profiles {:uberjar {:aot :all}
+             :dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+                                  [ring/ring-mock "0.3.2"]]}})

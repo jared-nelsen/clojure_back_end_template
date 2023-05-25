@@ -14,14 +14,16 @@
 
 (def app
   (-> (wrap-defaults app-routes api-defaults)
-      (wrap-params) 
+      (wrap-params)
       (wrap-json-body)
       (wrap-json-response)
-      (wrap-cors
-       :access-control-allow-origin [#".*"]
-       :access-control-allow-methods [:get :put :post :delete]
-       :access-control-allow-headers [:all])))
+      (wrap-cors :access-control-allow-origin [#".*"]
+                 :access-control-allow-methods [:get :put :post :delete]
+                 :access-control-allow-headers [:all])))
 
-(defn -main 
+(defn -main
   []
-  (ring-jetty/run-jetty app {:port 3000}))
+  (let [systemPort (System/getenv "PORT")
+        port (if (nil? systemPort) 3000 (Integer/parseInt systemPort))]
+    (println (str "App started! ... Port: " port))
+    (ring-jetty/run-jetty app {:port port})))
